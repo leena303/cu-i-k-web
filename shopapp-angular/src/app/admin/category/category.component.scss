@@ -1,0 +1,360 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f172a; /* Màu nền tối */
+  color: #ffffff;
+}
+
+.admin-layout {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    color: white;
+    padding: 20px 0;
+    height: 100%;
+    background: #010e2e;
+}
+
+.sidebar-header {
+    padding: 0 20px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #334155;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.menu-item:hover {
+  background-color: #334155;
+}
+
+.menu-item.active {
+  background-color: #3b82f6;
+}
+
+/* Content area */
+.content {
+    flex: 1;
+    background-color: #0f172a;
+    color: white;
+    overflow-y: auto;
+}
+
+.content-header {
+    color: white;
+    padding: 0 20px 20px;
+    margin-top: -9px;
+    border-bottom: 1px solid #334155;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.content-body {
+    padding: 20px;
+}
+
+// Định dạng bảng danh mục giống product
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+  background: #1e293b;
+  color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px #0002;
+  font-size: 1rem;
+}
+.product-table th, .product-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #334155;
+  text-align: left;
+  vertical-align: middle;
+}
+.product-table th {
+  background: #334155;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.product-table tr:last-child td {
+  border-bottom: none;
+}
+.product-table tr:hover td {
+  background: #22304a;
+  transition: background 0.2s;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+// Nút thao tác
+.btn-view {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px #0002;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.btn-view:hover {
+  background: blue;
+  color: #fff;
+  box-shadow: 0 4px 16px #2563eb44;
+}
+
+.btn-add {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 12px;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px #0002;
+}
+
+
+.btn-edit {
+  background: #10b981;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  margin-right: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-edit:hover {
+  background: green;
+}
+
+.btn-delete {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-delete:hover {
+  background: #dc2626;
+}
+
+.btn-save {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: background 0.2s;
+}
+.btn-save:hover {
+  background: #1d4ed8;
+}
+
+.btn-cancel {
+  background: #64748b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-cancel:hover {
+  background: #334155;
+}
+
+.btn-view {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px #0002;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.btn-view:hover {
+  background: #1d4ed8;
+  color: #fff;
+  box-shadow: 0 4px 16px #2563eb44;
+}
+
+// Input tìm kiếm
+input[type="text"] {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: #fff;
+  font-size: 1rem;
+  transition: border 0.2s, background 0.2s;
+}
+input[type="text"]:focus {
+  border: 1.5px solid #10b981;
+  background: #0f172a;
+  outline: none;
+}
+
+.form-edit-category {
+  background: #1e293b;
+  padding: 32px 32px 24px 32px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  min-width: 480px;
+  max-width: fit-content;
+  width: 100%;
+  box-shadow: 0 4px 32px #0006;
+  font-size: 1.15rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-edit-category h3 {
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+  color: #fff;
+  max-width: 213px;
+}
+
+.form-edit-category label {
+  font-weight: 500;
+  font-size: 1.08rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-edit-category input[type="text"] {
+  padding: 10px 14px;
+  font-size: 1.08rem;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: #fff;
+  margin-top: 6px;
+  transition: border 0.2s, background 0.2s;
+}
+
+.form-edit-category input[type="text"]:focus {
+  border: 1.5px solid #10b981;
+  background: #1e293b;
+  outline: none;
+}
+
+.form-edit-category .btn-save,
+.form-edit-category .btn-cancel {
+  min-width: 90px;
+  font-size: 1.08rem;
+  margin-right: 10px;
+}
+
+.form-edit-category .btn-save {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.form-edit-category .btn-save:hover {
+  background: #1d4ed8;
+}
+
+.form-edit-category .btn-cancel {
+  background: #64748b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.form-edit-category .btn-cancel:hover {
+  background: #334155;
+}
+
+.form-edit-category textarea {
+  padding: 10px 14px;
+  font-size: 1.08rem;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: #fff;
+  margin-top: 6px;
+  transition: border 0.2s, background 0.2s;
+  min-height: 80px;
+  resize: vertical;
+}
+.form-edit-category textarea:focus {
+  border: 1.5px solid #10b981;
+  background: #1e293b;
+  outline: none;
+}
+
+.pagination-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 16px;
+  margin: 0 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px #0002;
+}
+
+.pagination-btn:disabled {
+  background: #64748b;
+  color: #cbd5e1;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #1d4ed8;
+}

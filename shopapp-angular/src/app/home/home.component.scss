@@ -1,0 +1,255 @@
+/* Base Layout */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f172a;
+  color: white;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+  padding: 30px 20px;
+}
+
+/* Intro */
+.intro-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.intro-section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.intro-section p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Search & Filter */
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.search-box input {
+  width: 300px;
+  background-color: #13172a;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: white;
+}
+
+.form-control {
+  background-color: transparent;
+  color: white;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.product-category {
+  width: 200px;
+  background-color: #13172a;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.product-category:hover,
+.product-category:focus {
+  border-color: #00b4db;
+  box-shadow: 0 0 0 2px rgba(0, 180, 219, 0.2);
+  outline: none;
+}
+
+.product-category option {
+  background-color: #13172a;
+  color: white;
+  padding: 8px;
+}
+
+/* Product Grid */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.col-lg-4.col-md-6 {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Product Item */
+.product-item {
+  background-color: #13172a;
+  border: 1px solid rgba(35, 39, 61, 0.8);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+.product-image {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background-color: #0e1425;
+}
+
+.product-details-content {
+  flex-grow: 1;
+}
+
+.product-name {
+  color: white;
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.product-description {
+  color: #adb2cb;
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+
+.product-warranty {
+  color: #f27ed4;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.product-price {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-quantity {
+  font-size: 0.95rem;
+}
+
+.product-rating {
+  color: #FFD700;
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+
+.product-rating i {
+  margin-right: 3px;
+}
+
+.product-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  gap: 10px;
+}
+
+.product-actions .btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+}
+
+.btn-success {
+  background-color: #10b981;
+  color: white;
+  border: none;
+}
+
+/* Out of stock */
+.product-item.out-of-stock {
+  position: relative;
+  opacity: 0.5;
+  pointer-events: none;
+  filter: grayscale(0.7);
+}
+
+.out-of-stock-overlay {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(30, 41, 59, 0.85);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 12px 32px;
+  border-radius: 8px;
+  z-index: 2;
+  text-align: center;
+  pointer-events: none;
+}
+
+/* Pagination */
+.pagination-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  margin: 0 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px #0002;
+}
+
+.pagination-btn:disabled {
+  background: #64748b;
+  color: #cbd5e1;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+/* Footer */
+app-footer {
+  // background-color: #111827;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}

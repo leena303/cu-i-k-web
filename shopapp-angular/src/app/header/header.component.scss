@@ -1,0 +1,74 @@
+/* Header */
+.header {
+  background-color: transparent;
+  color: rgb(173, 178, 203);
+}
+
+/* Navbar */
+.navbar {
+  background-color: transparent !important;
+  padding: 0.5rem 0;
+}
+
+.navbar .container {
+  background-color: transparent !important;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  height: 48px;
+  object-fit: contain;
+}
+
+/* Navbar Brand */
+.navbar .navbar-brand {
+  color: rgb(173, 178, 203);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.navbar .navbar-brand:hover {
+  color: white;
+}
+
+/* Nav Links */
+.navbar-nav .nav-link {
+  color: rgb(173, 178, 203);
+  border-radius: 18px;
+  padding: 8px 16px;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* Active link */
+.navbar-nav .nav-link.active {
+  background-color: rgb(127, 68, 255);
+  color: white !important;
+  font-weight: 600;
+}
+
+/* User icon */
+.navbar-nav .fa-user-circle {
+  font-size: 1.3rem;
+  color: #60a5fa;
+  vertical-align: middle;
+}
+
+/* Toggler */
+.navbar-toggler {
+  border: none;
+  background-color: transparent !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}

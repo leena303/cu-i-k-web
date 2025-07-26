@@ -1,0 +1,38 @@
+<div class="admin-layout">
+  <div class="content" style="width: 70pc; background: #0f172a;">
+    <div class="content-header">
+      Quản lý người dùng
+    </div>
+    <div class="content-body" style=" margin-top: 30px; background: #0f172a; color: white;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <input type="text" placeholder="Tìm kiếm người dùng..." [(ngModel)]="searchText"
+          style="padding: 6px 12px; border-radius: 4px; border: 1px solid #ccc; width: 250px;">
+      </div>
+
+      <table class="product-table">
+        <thead>
+          <tr style="background: #334155; color: white;">
+            <th>ID</th>
+            <th>Họ tên</th>
+            <th>Email</th>
+            <th>Vai trò</th>
+            <th>Thao tác</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of filteredUsers">
+            <td>{{ user.id }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.role }}</td>
+            <td>
+              <div class="action-buttons">
+                <button class="btn btn-delete" (click)="deleteUser(user.id!)">Xóa</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

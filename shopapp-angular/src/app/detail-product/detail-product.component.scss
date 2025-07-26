@@ -1,0 +1,122 @@
+.container {
+  color: #f5f5f5;
+}
+
+/* Ảnh lớn */
+.product-image {
+  border: 1px solid #eee;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 12px;
+  max-height: 400px;
+  object-fit: contain;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Ảnh thumbnail */
+.thumbnail-image {
+  transition: transform 0.2s ease;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.thumbnail-image:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail-image.border-primary {
+  border: 2px solid #0d6efd !important;
+}
+
+/* Nút điều hướng ảnh */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 70% 70%;
+  width: 20px;
+  height: 20px;
+  filter: invert(0%) brightness(0) contrast(200%);
+}
+
+/* Button style */
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border: none;
+}
+
+.input-group .btn,
+.input-group .form-control {
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+/* Ẩn nút tăng/giảm trong input number - cho Chrome, Safari, Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Cho Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+/* Mô tả chi tiết */
+.product-description {
+  white-space: pre-line;
+  background: linear-gradient(135deg, #fdfdfd, #f3f3f3);
+  border-left: 6px solid #0d6efd;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-top: 20px;
+  color: #222;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-image {
+    max-height: 300px;
+  }
+
+  .col-md-6 {
+    text-align: center;
+  }
+}

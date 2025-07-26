@@ -1,0 +1,101 @@
+/* Footer nền đậm toàn màn hình */
+.site-footer {
+  margin-top: 120px;
+  width: 100%;
+  background-color: rgb(40, 32, 67); /* Màu tối công nghệ */
+  color: #ccc;
+  padding: 40px 0 20px;
+  font-size: 0.95rem;
+}
+/* Container giới hạn nội dung bên trong */
+.site-footer .container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+/* Bố cục hàng đầu của footer */
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 30px;
+}
+
+/* Cột nội dung trong footer */
+.footer-column {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.footer-column h4 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.footer-column p,
+.footer-column a,
+.footer-column li {
+  color: #bbb;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.footer-column a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+/* Danh sách không có chấm */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Icon mạng xã hội */
+.social-icons a {
+  color: #bbb;
+  font-size: 1.4rem;
+  margin-right: 12px;
+  transition: color 0.3s;
+}
+.social-icons a:hover {
+  color: #0d6efd;
+}
+
+/* Đường gạch ngang phân cách */
+.site-footer hr {
+  border-color: rgba(255, 255, 255, 0.1);
+  margin: 20px 0;
+}
+
+/* Phần cuối cùng - bản quyền */
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsive: mobile friendly */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}

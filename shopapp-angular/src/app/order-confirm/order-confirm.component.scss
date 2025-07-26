@@ -1,0 +1,119 @@
+/* Layout nền chung */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.intro-section h1 {
+  color: #ffffff; /* trắng sáng */
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); /* đổ bóng nhẹ */
+}
+
+.intro-section p {
+  color: #cfd8ff; /* xanh nhạt dễ đọc */
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Container chiếm phần còn lại */
+.container {
+  flex: 1;
+  padding: 40px 20px;
+}
+
+/* Bảng */
+.table {
+  background: #1c1c3c;
+  color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th {
+  background-color: #292b63;
+  color: #fff;
+  padding: 12px;
+}
+
+td {
+  background-color: #2e305e;
+  padding: 12px;
+  text-align: center;
+}
+
+td.text-start {
+  text-align: left;
+}
+
+/* Sản phẩm */
+.product-info {
+  display: flex;
+  align-items: center;
+}
+
+.product-image-order {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+.product-name-order {
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+}
+
+/* Quantity control */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-controls button {
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+}
+
+.quantity-controls span {
+  min-width: 30px;
+  text-align: center;
+}
+
+/* Button */
+.btn-gradient {
+  background: linear-gradient(to right, #ff40b4, #7e2bed);
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 20px;
+  min-width: 160px;
+  border: none;
+}
+
+.text-end h4 {
+  color: #ff69b4;
+  font-weight: bold;
+}
+
+/* Footer nằm dưới cùng */
+app-footer {
+  // background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}

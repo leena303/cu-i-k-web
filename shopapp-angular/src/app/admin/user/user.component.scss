@@ -1,0 +1,122 @@
+.admin-layout {
+  min-height: 100vh;
+  background: #0f172a;
+  padding: 32px 0;
+}
+
+.content {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #1e293b;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px rgba(30,41,59,0.12);
+  padding: 32px 24px;
+}
+
+.content-header {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+.content-body {
+  background: #1e293b;
+  color: #fff;
+  border-radius: 8px;
+  padding: 16px 0;
+}
+
+input[type="text"] {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #334155;
+  width: 250px;
+  background: #f8fafc;
+  color: #222;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus {
+  outline: 2px solid #6366f1;
+  border-color: #6366f1;
+}
+.user-table, .product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+  background: #1e293b;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(25, 118, 210, 0.06);
+  color: #fff;
+}
+
+.user-table th, .product-table th,
+.user-table td, .product-table td {
+  border: 1px solid #334155;
+  padding: 12px 10px;
+  text-align: left;
+  color: #fff;
+  background: #1e293b; // Nền tối cho cả th và td
+}
+
+.user-table th, .product-table th {
+  background: #334155 !important;
+  color: #fff !important;
+  font-weight: 600;
+}
+
+.user-table tr:nth-child(even), .product-table tr:nth-child(even) {
+  background: #22304a;
+}
+
+.user-table tr:hover, .product-table tr:hover {
+  background: #334155;
+}
+
+.user-table input, .product-table input {
+  background: #22304a;
+  color: #fff;
+  border: 1px solid #334155;
+}
+
+.user-table input:focus, .product-table input:focus {
+  outline: 2px solid #6366f1;
+  border-color: #6366f1;
+  background: #1e293b;
+  color: #fff;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-delete {
+  background: #e53935;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-delete:hover {
+  background: #b71c1c;
+}
+
+@media (max-width: 900px) {
+  .content {
+    padding: 12px 2px;
+  }
+  .user-table th, .user-table td,
+  .product-table th, .product-table td {
+    padding: 8px 4px;
+    font-size: 0.95rem;
+  }
+}
